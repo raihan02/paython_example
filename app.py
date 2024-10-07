@@ -33,4 +33,4 @@ def process_request():
         return jsonify({"error": "Failed to process request"}), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=3000, debug=True)
+    app.run(debug=True)
