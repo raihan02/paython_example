@@ -7,7 +7,7 @@ app = Flask(__name__)
 def process_request():
     data = request.json
     device_token = data.get('device_token')
-    youtube_url = data.get('youtube_url')
+    youtube_url = data.get('https://www.youtube.com/watch?v=l2hA8g1cNvQ')
     user_id = data.get('id')
 
     if not device_token or not youtube_url or not user_id:
@@ -33,4 +33,4 @@ def process_request():
         return jsonify({"error": "Failed to process request"}), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=10000, debug=True)
+    app.run(host='0.0.0.0', port=3000, debug=True)
